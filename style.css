@@ -164,7 +164,7 @@ body {
 }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 620px) {
     .card {
         width: var(--Width_Desktop_600px);
         height: var(--Height);

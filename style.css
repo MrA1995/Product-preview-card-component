@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root {
+    /* Colors */
+    --Black: #1C232B;
+    --Grey: #6C7289;
+    --Cream: #F2EAE2;
+    --White: #FFFFFF;
+    --Green_500: #3D8168;
+    --Green_700: #1A4032;
+
+    /* Size */
+    --Width_Desktop_600px: 42.9em;
+    --Width_Tablet_600px: 600px;
+    --Width_Mobile_350px: 25em;
+    --Height: fit-content;
+    --Height-image_342px: 21.375em;
+    --Font_Size_32px: 2.285em;
+    --Font_Size_Root: 14px;
+    --Font-Size_14px: 1em;
+    --Font_Size_13px: 0.929em;
+    --Font_Size_12px: 0.857em;
+
+    /* Spacing */
+    --Spacing-500_40px: 40px;
+    --Spacing-400_32px: 32px;
+    --Spacing-300_24px: 24px;
+    --Spacing-200_16px: 16px;
+    --Spacing-100_8px: 8px;
+    --Spacing-50_4px: 4px;
+    --Letter-Spacing_5px: 0.357em;
+    --Gap-Flexbox_8px: 8px;
+    --Gap-FlexBox_16px: 16px;
+
+    /* Font Family */
+    --Fraunces: "Fraunces", serif;
+    --Montserrat:' "Montserrat", sans-serif';
+
+    /* Line height */
+    --Line-Height_150: 150%;
+    --Line-Height_160: 160%;
+    --Line-Height_120: 120%;
+    --Line-Height_110: 110%;
+    --Line-Height_100: 100%;
+
+    /* border radius */
+    --Radius_8px: 8px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: var(--Font_Size_Root);
+}
+
+body {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--Cream);
+}
+.layout_FlexBox_1, .layout_FlexBox_4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.layout_FlexBox_2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--Spacing-200_16px)
+}
+.layout_FlexBox_3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--Spacing-100_8px);
+}
+
+.color-Black { color: var(--Black); }
+.color-Grey { color: var(--Grey); }
+.color-Cream { color: var(--Cream); }
+.color-White { color: var(--White); }
+.color-Green_500 { color: var(--Green_500); }
+.color-Green_700 { color: var(--Green_700); }
+
+.text-preset-1 { 
+    font-weight: bold;  
+    font-size: var(--Font_Size_32px);    
+    line-height: var(--Line-Height_100); 
+    font-family: "Fraunces", serif;
+}
+.text-preset-2 { 
+    font-weight: bold;
+    font-size:  var(--Font-Size_14px);
+    line-height: var(--Line-Height_110);
+    font-family: "Montserrat", sans-serif; 
+}
+.text-preset-3 { 
+    font-weight: medium;
+    font-size:  var(--Font-Size_14px);
+    line-height: var(--Line-Height_160);
+    font-family: "Montserrat", sans-serif; 
+}
+.text-preset-4 { 
+    font-weight: medium;
+    font-size:  var(--Font-Size_12px);
+    line-height: var(--Line-Height_120);
+    font-family: "Montserrat", sans-serif; 
+    letter-spacing: var(--Letter-Spacing_5px);
+    text-transform: uppercase;
+}
+.text-preset-5 { 
+    font-weight: medium;
+    font-size:  var(--Font-Size_13px);
+    line-height: var(--Line-Height_120);
+    font-family: "Montserrat", sans-serif; 
+    text-decoration: line-through;
+}
+
+.hover-button {
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out 0.05s;
+}
+.hover-button:hover {background-color: var(--Green_700);}
+
+.card {
+    width: var(--Width_Mobile_350px);
+    height: var(--Height);
+    background-color: var(--White);
+    margin: 5vh auto;
+}
+
+.content {padding: var(--Spacing-400_32px);}
+
+.image-header, .image, .content, .title, .price, .button  {
+    width: 100%;
+    height: var(--Height);
+}
+
+.card, .button, .image-header, .image {
+    border-radius: var(--Radius_8px);
+}
+
+.image-header, .image { 
+    height: var(--Height-image_342px);
+    border-radius: 8px 8px 0 0;
+}
+
+.title, .title > p, .price {margin: 0 0 var(--Spacing-300_24px) 0;}
+.title p:last-child {margin-bottom: 0;}
+
+.button {
+    background-color: var(--Green_500);
+    padding: var(--Spacing-200_16px) var(--Spacing-400_32px);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin: 32px auto;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 400px) {
+    .card {
+        width: var(--Width_Desktop_600px);
+        height: var(--Height);
+        margin: 15vh auto;
+        padding: 0;
+    }
+    .layout_FlexBox_1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .content {
+        width: 100%;
+        height: 100%;
+    }
+    .image-header {
+        height: var(--Height);
+        object-fit: cover;
+    }
+    .image {
+        width: 105%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: var(--Radius_8px) 0 0 var(--Radius_8px);
+    }
+}
